@@ -1,14 +1,14 @@
 
 import { Link, useNavigate } from "react-router-dom";
-import "./login.css";
 import { useFormik } from "formik";
-import * as yup from "yup";
 import { useState } from "react";
+import * as yup from "yup";
+import "./login.css";
 
 export function LoginPage() {
 
 
-    const [userDetails]= useState({UserId:'admin', Password:'admin@1'});
+    const [userDetails]= useState({UserId:'admin', Password:'Admin@1'});
 
     let navigate = useNavigate();
     
@@ -26,7 +26,7 @@ export function LoginPage() {
         }),
         onSubmit: (user) => {
             if(user.UserName === userDetails.UserId && user.Password === userDetails.Password){
-                navigate('/')
+                navigate('/home')
             }else{
                 navigate('/invalid');
             }

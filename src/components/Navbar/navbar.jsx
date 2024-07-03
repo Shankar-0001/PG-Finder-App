@@ -5,7 +5,7 @@ export function NavBar(){
     return(
         <div className="navbars">
             <div className="btns">
-                <Link to='/login' className='btnBox'>Login</Link>
+                <Link to='/' className='btnBox'>Login</Link>
                 <Link to='/signup' className='btnBox'>Signup</Link>
                 <div className="navBarTitle">
                     <span>--PlatFormPro--</span>
