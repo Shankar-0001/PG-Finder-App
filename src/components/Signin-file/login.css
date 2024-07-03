@@ -1,0 +1,14 @@
+form {
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px black;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}

@@ -1,0 +1,190 @@
+.navbars {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(1, 56, 83);
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnBox {
+    margin: 5px;
+    padding: 7px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: black;
+}
+
+.btnBox:hover {
+    color: black;
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.navBarTitle {
+    left: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+
+}
+
+/* @media query for responsiveness*/
+
+/* Extra small devices(Phones, less than 600px) */
+@media only screen and (max-width: 425px) {
+    .navbars {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btns {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btnBox {
+        flex: 1;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .navBarTitle {
+        left: 0;
+        width: 100%;
+        font-size: 20px;
+        transform: none;
+        margin-top: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    /* .socials {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    } */
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width:425px) and (max-width:760px) {
+    .navbars {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btns {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btnBox {
+        flex: 1;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .navBarTitle {
+
+        left: 0;
+        width: 100%;
+        font-size: 22px;
+        margin-top: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Medium devices (landscap tablets, 768px and up) */
+@media only screen and (min-width:768px) and (max-width:992px) {
+    .navbars {
+        padding: 10px;
+    }
+
+    .btnBox {
+        margin-right: 5px;
+        padding: 10px 10px;
+    }
+
+    .navBarTitle {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 28px;
+    }
+}
+
+/* Large devices (Desktops, 1200px and up) */
+
+@media only screen and (min-width:992px) {
+    .navbars {
+        padding: 18px;
+    }
+
+    .btnBox {
+        padding: 10px 15px;
+        margin-right: 10px;
+    }
+
+    .navBarTitle {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
