@@ -1,19 +1,20 @@
-
 import { Link, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 import { useFormik } from "formik";
-import { useState } from "react";
+// import { useState } from "react";
 import * as yup from "yup";
+import axios from "axios";
 import "./login.css";
 
 export function LoginPage() {
 
 
-    const [userDetails]= useState({UserId:'admin', Password:'Admin@1'});
-
+    // const [userDetails]= useState({UserId:'admin', Password:'Admin@1'});
+    const [cookie, setcookie, removecookie] = useCookies('userid')
     let navigate = useNavigate();
-    
-    
-    
+
+
+
     const formik = useFormik({
         initialValues: {
             UserName: '',
@@ -24,12 +25,18 @@ export function LoginPage() {
             Password: yup.string().required("Password Required").matches(/(?=.*[A-Z])\w{3,15}/, "Password 3 to 15 atleast one uppercase letter")
 
         }),
-        onSubmit: (user) => {
-            if(user.UserName === userDetails.UserId && user.Password === userDetails.Password){
-                navigate('/home')
-            }else{
-                navigate('/invalid');
-            }
+        onSubmit: (formdata) => {
+            axios.get('http://127.0.0.1:4040/users')
+                .then((response) => {
+                    var user = response.data.find(user => user.UserId === formdata.UserName)
+                    console.log('hello')
+                    if (user && user.Password === formdata.Password) {
+                        setcookie('userid', formdata.UserName);
+                        navigate('/home')
+                    } else {
+                        navigate('/invalid');
+                    }
+                })
         }
     })
 

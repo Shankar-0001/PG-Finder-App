@@ -1,17 +1,15 @@
 
-import './App.css';
-import { NavBar } from './components/Navbar/navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LoginPage } from './components/Signin-file/login-page';
 import { SignUp } from './components/Signup-file/signup';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { NavBar } from './components/Navbar/navbar';
 import { Invalid } from './components/invalid';
 import { Home } from './components/Home';
-// import { Link } from 'react-router-dom';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
         <header>
           <NavBar />
