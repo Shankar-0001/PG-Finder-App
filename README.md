@@ -1,1 +1,2 @@
-### Navigation is working successfully.
+### PG Finder Application 
+This application is related to finding a PG's and Hostels in big cities like Bangalore, Hyderabad, Delhi, Pune, Mumbai, kolkata, Noida etc. Because a lot of students and people gose those type of cities for Studies, Training and Jobs, and there they face a lot of problems such as not good PG, Hostel, Flight and they pay too much amout for that. For solving this kind of problem we provide a service for finding a PG, Hostel and flights in good price.
