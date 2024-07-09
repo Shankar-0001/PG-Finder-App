@@ -8,7 +8,7 @@ export function Invalid() {
                 o..oow there is nothing to find try again
             </div>
             <div>
-                <Link to='/login'>Try Again</Link>
+                <Link to='/'>Try Again</Link>
             </div>
         </>
     )

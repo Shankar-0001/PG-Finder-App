@@ -1,5 +1,4 @@
 .navbars {
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -135,7 +134,7 @@
 /* Medium devices (landscap tablets, 768px and up) */
 @media only screen and (min-width:768px) and (max-width:992px) {
     .navbars {
-        padding: 10px;
+        padding: 5px;
     }
 
     .btnBox {
@@ -164,7 +163,7 @@
 
 @media only screen and (min-width:992px) {
     .navbars {
-        padding: 18px;
+        padding: 2px;
     }
 
     .btnBox {

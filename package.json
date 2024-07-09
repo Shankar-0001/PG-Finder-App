@@ -19,6 +19,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.0",
     "react-scripts": "5.0.1",
+    "swal": "^0.1.0",
+    "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
@@ -45,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
   }
 }

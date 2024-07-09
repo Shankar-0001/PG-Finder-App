@@ -21,9 +21,40 @@ app.get('/users', (req, res) => {
         database.collection('users').find({}).toArray().then(documents => {
             res.send(documents);
             res.end();
+        });
+    });
+});
+
+//Get Admin from the database
+
+app.get('/admin', (req, res) => {
+    mongoClient.connect(conUrl).then(obj => {
+        var database = obj.db('pgdatabase');
+        database.collection('admin').find({}).toArray().then(documents => {
+            res.send(documents);
+            res.end();
         })
     })
 })
+
+//API  for register users on database.
+
+app.post('/register-users', (req, res) => {
+    mongoClient.connect(conUrl).then(obj => {
+        var database = obj.db('pgdatabase');
+        var user = {
+            UserId: req.body.UserId,
+            UserName: req.body.UserName,
+            Password: req.body.Password,
+            Email: req.body.Password
+        };
+        database.collection('users').insertOne(user).then(() => {
+            console.log('User Registered...');
+            res.end();
+        });
+    });
+});
+
 
 
 

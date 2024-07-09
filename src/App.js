@@ -4,6 +4,7 @@ import { LoginPage } from './components/Signin-file/login-page';
 import { SignUp } from './components/Signup-file/signup';
 import { NavBar } from './components/Navbar/navbar';
 import { Invalid } from './components/invalid';
+import { Admin } from './components/Admin';
 import { Home } from './components/Home';
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
         <section className="mt-4">
           <Routes>
             <Route path='/' element={<LoginPage />} />
+            <Route path='admin' element={<Admin />} />
             <Route path='home' element={<Home />} />
             <Route path='signup' element={<SignUp />} />
             <Route path='navbar' element={<NavBar />} />
@@ -25,8 +27,6 @@ function App() {
           </Routes>
         </section>
       </BrowserRouter>
-
-
     </div>
   );
 }

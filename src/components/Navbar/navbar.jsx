@@ -6,7 +6,7 @@ export function NavBar(){
         <div className="navbars">
             <div className="btns">
                 <Link to='/' className='btnBox'>Login</Link>
-                <Link to='/signup' className='btnBox'>Signup</Link>
+                <Link to='/admin' className='btnBox'>Admin</Link>
                 <div className="navBarTitle">
                     <span>--PlatFormPro--</span>
                 </div>
@@ -17,6 +17,8 @@ export function NavBar(){
             </div>
             
         </div>
+
+        
     )
 }
 export default NavBar;

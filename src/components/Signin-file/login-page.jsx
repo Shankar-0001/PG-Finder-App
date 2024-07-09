@@ -29,7 +29,6 @@ export function LoginPage() {
             axios.get('http://127.0.0.1:4040/users')
                 .then((response) => {
                     var user = response.data.find(user => user.UserId === formdata.UserName)
-                    console.log('hello')
                     if (user && user.Password === formdata.Password) {
                         setcookie('userid', formdata.UserName);
                         navigate('/home')
@@ -54,7 +53,7 @@ export function LoginPage() {
                 </dl>
                 <button className="btn btn-success w-100">Login</button>
                 <div>
-                    <Link to='/signup'>SignUp Account</Link>
+                        <Link to="/signup" className="btn btn-outline-dark mt-2 w-100">New User Register</Link>
                 </div>
             </form>
         </div>
