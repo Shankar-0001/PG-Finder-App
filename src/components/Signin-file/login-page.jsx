@@ -51,7 +51,7 @@ export function LoginPage() {
                     <dd><input type="password" onChange={formik.handleChange} name="Password" className="form-control" /></dd>
                     <dd className="text-danger"> {formik.errors.Password} </dd>
                 </dl>
-                <button className="btn btn-success w-100">Login</button>
+                <button className=" text-inherit rounded-3xl shadow-sm antialiased leading-9  w-100 bg-indigo-200 hover:bg-green-100 text-xl">Login</button>
                 <div>
                         <Link to="/signup" className="btn btn-outline-dark mt-2 w-100">New User Register</Link>
                 </div>

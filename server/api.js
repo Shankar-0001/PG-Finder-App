@@ -13,6 +13,18 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cors());
 
+//API for getting Products from the database
+
+app.get('/products',(req, res) =>{
+    mongoClient.connect(conUrl).then(obj =>{
+        var database = obj.db('pgdatabase');
+        database.collection('products').find({}).toArray().then(documents =>{
+            res.send(documents);
+            res.end();
+        });
+    });
+});
+
 // API for getting users from the database;
 
 app.get('/users', (req, res) => {
