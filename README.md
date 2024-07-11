@@ -14,6 +14,6 @@ The PG Finder Application is designed to assist individuals, especially students
 
 ## Tech Stack
 
-- **Frontend:** React.js
-- **Backend:** Node.js, Express.js
+- **Frontend:** React.js, HTML, CSS, Tailwindcss, Bootstrap, JavaScript
+- **Backend:** Node.js, Express.js, Axios, Formik
 - **Database:** MongoDB
